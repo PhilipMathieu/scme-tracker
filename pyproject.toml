@@ -1,0 +1,18 @@
+[project]
+name = "scme-tracker"
+version = "0.1.0"
+description = "Tool for scraping and tracking CSV data for policy bill tracking"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "playwright>=1.50.0",
+]
+
+[project.scripts]
+scrape = "csv_scraper:main"
+
+[tool.setuptools]
+py-modules = ["csv_scraper", "run_scraper", "config"]
+
+[tool.setuptools.packages.find]
+exclude = ["archive*", "downloads*"]
